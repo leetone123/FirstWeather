@@ -113,7 +113,7 @@ public class FirstWeatherDB {
 	/**
 	 * 从数据库中读取某城市下的所有县信息
 	 */
-	public List<Country> loadCountry(int cityId){
+	public List<Country> loadCountries(int cityId){
 		List<Country> list = new ArrayList<Country>();
 		Cursor cursor = db.query("Country", null, "city_id=?", new String[]{
 				String.valueOf(cityId)},null,null,null);
